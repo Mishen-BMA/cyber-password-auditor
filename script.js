@@ -14,7 +14,6 @@ document
 
 });
 
-
 function auditPassword(){
 
     let password =
@@ -25,32 +24,47 @@ function auditPassword(){
     let issues = [];
 
     if(password.length >= 8){
+
         score++;
+
     }else{
+
         issues.push("Password is shorter than 8 characters");
     }
 
     if(/[A-Z]/.test(password)){
+
         score++;
+
     }else{
+
         issues.push("Missing uppercase letter");
     }
 
     if(/[a-z]/.test(password)){
+
         score++;
+
     }else{
+
         issues.push("Missing lowercase letter");
     }
 
     if(/[0-9]/.test(password)){
+
         score++;
+
     }else{
+
         issues.push("Missing number");
     }
 
     if(/[!@#$%^&*]/.test(password)){
+
         score++;
+
     }else{
+
         issues.push("Missing special character");
     }
 
@@ -63,14 +77,12 @@ function auditPassword(){
         strength = "Weak";
         color = "red";
         width = "30%";
-
     }
     else if(score <= 4){
 
         strength = "Medium";
         color = "orange";
         width = "70%";
-
     }
     else{
 
@@ -79,22 +91,22 @@ function auditPassword(){
         width = "100%";
     }
 
-    document.getElementById(
-        "strengthFill"
-    ).style.width = width;
+    document
+    .getElementById("strengthFill")
+    .style.width = width;
 
-    document.getElementById(
-        "strengthFill"
-    ).style.background = color;
+    document
+    .getElementById("strengthFill")
+    .style.background = color;
 
-    document.getElementById(
-        "strengthText"
-    ).innerHTML =
+    document
+    .getElementById("strengthText")
+    .innerHTML =
     `Password Strength: <strong>${strength}</strong>`;
 
-    document.getElementById(
-        "results"
-    ).innerHTML =
+    document
+    .getElementById("results")
+    .innerHTML =
 
     `
     <h3>Security Report</h3>
@@ -104,10 +116,20 @@ function auditPassword(){
     <p>
     <strong>Issues Found:</strong>
     <br>
-    ${issues.length ?
-      issues.join("<br>")
-      :
-      "No major issues detected"}
+    ${issues.length
+        ? issues.join("<br>")
+        : "No major issues detected"}
     </p>
     `;
+
+    document
+.getElementById("password")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+        auditPassword();
+    }
+
+});
+
 }
