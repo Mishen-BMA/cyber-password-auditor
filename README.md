@@ -17,9 +17,19 @@ A cybersecurity-focused password auditing tool that evaluates password strength 
 - CSS
 - JavaScript
 
-## Screenshot
+## Screenshots
 
-![Cyber Password Auditor](assets/screenshot.png)
+### Home Screen
+
+![Home Screen](assets/home.png)
+
+### Strong Password Analysis
+
+![Strong Password](assets/strong-password.png)
+
+### Weak Password Analysis
+
+![Weak Password](assets/weak-password.png)
 
 ## How To Run
 
