@@ -2,6 +2,10 @@
 
 A cybersecurity-focused password auditing tool that evaluates password strength and identifies common security weaknesses.
 
+## Live Demo
+
+🌐 https://mishen-bma.github.io/cyber-password-auditor/
+
 ## Features
 
 - Password strength analysis
